@@ -22,8 +22,8 @@ void hasieratu(){
 	int i = 0, j = 0, z = 0, sobra=4;
 
 	for (i = 0; i < BEZEROMAX; i++){
-		strcpy(hotela.bezeroak[i].izena,"izena");
-		strcpy(hotela.bezeroak[i].abizena, "abizena");
+		strcpy(hotela.bezeroak[i].izena,"Izena");
+		strcpy(hotela.bezeroak[i].abizena, "Abizena");
 		strcpy(hotela.bezeroak[i].NAN, "NAN");
 		strcpy(hotela.bezeroak[i].visa, "visa");
 		hotela.bezeroak[i].kodea = -1;
