@@ -5,13 +5,25 @@
 #include "menu.h"
 
 int main(){
+	FILE *fitxategia = NULL;
 	int aukera = 0;
 	srand(time(0));
 
-	hasieratu(hotela);
-
+	if ((fitxategia = fopen("hotela.txt", "r")) != NULL){
+		fread(&hotela, sizeof(HOTELA), 1, fitxategia);
+		fclose(fitxategia);//zeatik hemen barruen?
+	}
+	else{
+		hasieratu(hotela);
+	}
+	
 	menuprintzipala();
 	menupertsona();
+
+	if ((fitxategia = fopen("hotela.txt", "w")) != NULL){
+		fwrite(&hotela, sizeof(HOTELA), 1, fitxategia);
+	}//eztozu itxibier
+	fclose(fitxategia);
 
 	fflush(stdin);
 	getchar();

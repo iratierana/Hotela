@@ -17,6 +17,7 @@ typedef struct{
 }ERRESERBA;
 
 typedef struct{
+	int id;
 	int kodea;
 	ERRESERBA erreserba[ERRESERBAMAX];
 	int erabilgarria;//libre 1 bai - 0 ez
@@ -24,7 +25,6 @@ typedef struct{
 	int mota;
 	int pixua;
 	int prezioa;
-	int id;
 }GELAK;
 
 typedef struct{
