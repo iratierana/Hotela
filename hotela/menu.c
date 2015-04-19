@@ -1,8 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <time.h>
 #include <Windows.h>
 #include "main.h"
 #include "menu.h"
+#include "info.h"
 
 int menuprintzipala(){
 	time_t tiempo = time(0);
@@ -12,6 +15,7 @@ int menuprintzipala(){
 	printf("***** IRATI HOTELA *****\n\n");
 	strftime(output, 128, "%Y/%m/%d %H:%M:%S", tlocal);
 	printf("%s\n", output);
+	printf("Eskoritza\n");
 	printf("Aranburuzabala 32\n");
 	printf("Logelak 50€ tik aurrera\n");
 	printf("    Banakakoak --> 50€\n");
@@ -22,6 +26,7 @@ int menuprintzipala(){
 
 void menupertsona(){
 	int aukera = -1;
+
 	while (aukera != 0){
 		printf("*********************************\n");
 		printf("1-. Bezeroa\n");
@@ -185,7 +190,7 @@ void desErreserba(){
 				for (z = 0; z < ERAIKINMAX; z++){
 					for (j = 0; j < GELAMAX; j++){
 						if (hotela.eraikinak[i].gela[j].kodea == kodea){
-							hotela.eraikinak[i].gela[j].erabilgarria == 1;
+							hotela.eraikinak[i].gela[j].erabilgarria = 1;
 						}
 					}
 				}

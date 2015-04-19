@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include"info.h"
 #include "main.h"
 #include "menu.h"
 

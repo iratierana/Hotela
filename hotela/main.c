@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <time.h>
 #include <windows.h>
@@ -11,7 +13,7 @@ int main(){
 
 	if ((fitxategia = fopen("hotela.txt", "r")) != NULL){
 		fread(&hotela, sizeof(HOTELA), 1, fitxategia);
-		fclose(fitxategia);//zeatik hemen barruen?
+		fclose(fitxategia);
 	}
 	else{
 		hasieratu(hotela);
@@ -22,16 +24,16 @@ int main(){
 
 	if ((fitxategia = fopen("hotela.txt", "w")) != NULL){
 		fwrite(&hotela, sizeof(HOTELA), 1, fitxategia);
-	}//eztozu itxibier
-	fclose(fitxategia);
-
+		fclose(fitxategia);
+	}
+	
 	fflush(stdin);
 	getchar();
 	return 0;
 }
 
 void hasieratu(){
-	int i = 0, j = 0, z = 0, sobra=4;
+	int i = 0, j = 0, z = 0, sobra=4;//sobra zetako??? ta z????
 
 	for (i = 0; i < BEZEROMAX; i++){
 		strcpy(hotela.bezeroak[i].izena,"Izena");
